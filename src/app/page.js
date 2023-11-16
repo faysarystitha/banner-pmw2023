@@ -7,9 +7,6 @@ import { useState } from 'react'
 export default function Home() {
   const [nama, setNama] = useState('')
   const [displayValue, setDisplayValue] = useState('Faysa Ryestitha Etsuko')
-  // const handlerGantiNama = () => {
-  //   setNama(e.target.value)
-  // }
   const handlerButtonClick = () => {
     setDisplayValue(nama)
   }
@@ -29,7 +26,6 @@ export default function Home() {
             <h1>{displayValue}</h1>
             <div className="bio-nim-header-banner">
               <p>D121211027</p>
-              {/* <p>{angka}</p> */}
             </div>
           </div>
         </div>
