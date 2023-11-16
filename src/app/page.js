@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import './globals.css'
+import '@styles/home.css'
 import { useState } from 'react'
 
 export default function Home() {
