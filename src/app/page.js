@@ -1,7 +1,18 @@
+'use client'
+
 import Image from 'next/image'
 import './globals.css'
+import { useState } from 'react'
 
 export default function Home() {
+  const [nama, setNama] = useState('')
+  const [displayValue, setDisplayValue] = useState('Faysa Ryestitha Etsuko')
+  // const handlerGantiNama = () => {
+  //   setNama(e.target.value)
+  // }
+  const handlerButtonClick = () => {
+    setDisplayValue(nama)
+  }
   return (
     <div className="body">
       <div className="banner-container">
@@ -15,19 +26,23 @@ export default function Home() {
             />
           </div>
           <div className="content-header-banner">
-            <h1>Faysa Ryestitha E.</h1>
+            <h1>{displayValue}</h1>
             <div className="bio-nim-header-banner">
               <p>D121211027</p>
-              <p>Do your best</p>
+              {/* <p>{angka}</p> */}
             </div>
           </div>
         </div>
         <div className="cta-banner-wrapper">
-          <a href=''>
-            <div className='cta-button'>
-              <p>Halo!</p>
-            </div>
-          </a>
+          <div className='input-button'>
+            <input id="nama" type="text" required value={nama} onChange={(e) => setNama(e.target.value)}/>
+            <label for="">Masukkan nama</label>
+          </div>
+        </div>
+        <div className="cta-banner-wrapper">
+          <div className='cta-button' onClick={ handlerButtonClick }>
+            <p>Submit</p>
+          </div>
         </div>
       </div>
     </div>
